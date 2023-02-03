@@ -1,37 +1,45 @@
 import Link from "next/link";
-import { client } from "@libs/client";
-import type { Blog, Tag } from "@src/types/blog";
+import { client } from "libs/client";
+import type { Blog, Tag } from "types/blog";
+import { InferGetStaticPropsType, NextPage } from "next";
 
 // Props（blogsとtags）の型
 type Props = {
   blogs: Blog[];
-  tags: Tag[];
+  // tags: Tag[];
 };
 
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
   const blog = await client.get({ endpoint: "blog" });
-  const tag = await client.get({ endpoint: "tag" });
+  // const tag = await client.get({ endpoint: "tag" });
 
   return {
     props: {
       blogs: blog.contents,
-      tags: tag.contents,
+      // tags: tag.contents,
     },
   };
 };
 
-export default function Home({ blogs, tags }: Props) {
+const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  blogs,
+  // tags
+}: Props) => {
   return (
     <div>
       <ul>
         {blogs.map((blog) => (
           <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            <Link href={`/blog/${blog.id}`}>
+              <a>{blog.title}</a>
+            </Link>
           </li>
         ))}
       </ul>
     </div>
-  );
+  )
 }
+
+export default Home;

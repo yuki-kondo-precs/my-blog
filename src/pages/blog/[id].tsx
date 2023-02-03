@@ -1,18 +1,20 @@
 // pages/blog/[id].js
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
-import { client } from "@libs/client";
-import styles from '@src/styles/Home.module.scss';
-import type { Blog } from "@src/types/blog";
+import { client } from "libs/client";
+import type { Blog } from "types/blog";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+import { ParsedUrlQuery } from "querystring";
 
 // Props（blog）の型
 type Props = {
   blog: Blog;
   highlightedBody: string;
 };
+interface Params extends ParsedUrlQuery {
+  id: string
+}
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
