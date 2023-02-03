@@ -38,13 +38,5 @@
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-order": "^6.0.1",
     "typed-scss-modules": "^7.0.2"
-  },
-  "prettier": {
-    "trailingComma": "all",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "printWidth": 100
   }
 }
