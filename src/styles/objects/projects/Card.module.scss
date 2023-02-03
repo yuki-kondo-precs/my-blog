@@ -1,0 +1,25 @@
+@use "../../foundation/typography" as *;
+
+.p-card {
+  padding: 20px;
+  background-color: var(--color-white);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+  }
+
+  &__title {
+    margin-top: 24px;
+    @include sub-heading2;
+  }
+
+  &__summary {
+    margin-top: 56px;
+  }
+}

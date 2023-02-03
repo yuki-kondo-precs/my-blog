@@ -1,14 +1,14 @@
+
+@use 'typography' as *;
 body {
-  font: {
-    size: 13px;
-    family: var(--font-sans-serif);
-  }
+  @include paragraph4;
 
   min-width: var(--width-base);
   line-height: 1.5;
   padding: 0 7%;
   color: var(--color-black);
   letter-spacing: 0.05em;
+  background-color: var(--color-light-grey2);
 }
 
 a {

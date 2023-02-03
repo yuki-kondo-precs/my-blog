@@ -1,0 +1,5 @@
+.p-card-list {
+  display: grid;
+  grid-template-columns: repeat(minmax(200px, 300px), 1fr);
+  gap: 32px;
+}
