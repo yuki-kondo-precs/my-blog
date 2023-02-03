@@ -2,6 +2,7 @@ import Link from "next/link";
 import { client } from "libs/client";
 import type { Blog, Tag } from "types/blog";
 import { InferGetStaticPropsType, NextPage } from "next";
+import { ContentLayout } from "components/Layout";
 
 // Props（blogsとtags）の型
 type Props = {
@@ -28,17 +29,20 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   // tags
 }: Props) => {
   return (
-    <div>
-      <ul>
-        {blogs.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ContentLayout
+      content={<div>
+        <ul>
+          {blogs.map((blog) => (
+            <li key={blog.id}>
+              <Link href={`/blog/${blog.id}`}>
+                {blog.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>}
+    >
+    </ContentLayout>
   )
 }
 

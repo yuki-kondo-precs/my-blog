@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "run-p dev:next tsm",
+    "dev:next": "next dev",
+    "tsm": "typed-scss-modules src --watch --implementation sass --nameFormat none --exportType default --aliasPrefixes.@ src/",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -21,14 +23,21 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-helmet": "^6.1.0",
     "sass": "^1.58.0",
+    "the-new-css-reset": "^1.8.3",
     "typescript": "4.9.5"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.31",
     "@types/highlightjs": "^9.12.2",
     "eslint-config-prettier": "^8.6.0",
-    "prettier": "^2.8.3"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-order": "^6.0.1",
+    "typed-scss-modules": "^7.0.2"
   },
   "prettier": {
     "trailingComma": "all",

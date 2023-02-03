@@ -3,5 +3,19 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  }
+  },
+  // css, scss ファイルは Stylelint でフォーマットするため、Pretteir によるフォーマットを回避
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  // VS Code の CSS, SCSS の Lint オフ
+  // Stylelint とのバッティング回避
+  "css.validate": false,
+  "scss.validate": false,
+  "prettier.configPath": "./.prettierrc",
+  "prettier.ignorePath": "./.prettierignore",
+  "cssVariables.lookupFiles": ["./src/styles/foundation/conf/_variable.scss"]
 }

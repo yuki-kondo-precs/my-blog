@@ -1,0 +1,9 @@
+@mixin l_contents {
+  .l-contents {
+    @content;
+  }
+}
+
+@include l_contents {
+  flex-grow: 1;
+}
