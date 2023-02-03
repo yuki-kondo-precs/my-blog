@@ -16,7 +16,6 @@ interface Params extends ParsedUrlQuery {
   id: string
 }
 
-// 静的生成のためのパスを指定します
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const data = await client.get({ endpoint: "blog" });
 
@@ -24,7 +23,6 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   return { paths, fallback: false };
 };
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const id = context.params?.id;
   const blog = await client.get({ endpoint: "blog", contentId: id });

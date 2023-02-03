@@ -10,8 +10,6 @@ type Props = {
   // tags: Tag[];
 };
 
-
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
   const blog = await client.get({ endpoint: "blog" });
   // const tag = await client.get({ endpoint: "tag" });

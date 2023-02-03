@@ -37,3 +37,5 @@ next-env.d.ts
 
 # generated typed SCSS
 *.module.scss.d.ts
+_*.scss.d.ts
+globals.scss.d.ts
