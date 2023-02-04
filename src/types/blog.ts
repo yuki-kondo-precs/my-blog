@@ -3,7 +3,7 @@ export type Blog = {
   content: string;
   title: string;
   tags: Tag[];
-  image: string;
+  image: Image;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
@@ -12,9 +12,15 @@ export type Blog = {
 
 export type Tag = {
   id: string;
-  tag: string;
+  name: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
   revisedAt: string;
 };
+
+export type Image = {
+  url: string;
+  height: number;
+  width: number;
+}

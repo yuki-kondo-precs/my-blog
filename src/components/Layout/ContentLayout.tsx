@@ -11,9 +11,9 @@ type ContentLayoutProps = {
 HeaderLayout
 export const ContentLayout = ({ children, content }: ContentLayoutProps) => {
   return (
-    <main className={mainStyles['l-main']}>
+    <main className={mainStyles.main}>
       <HeaderLayout />
-      <div className={ContentsStyles['l-contents']}>
+      <div className={ContentsStyles.contents}>
         {content}
       </div>
     </main>

@@ -6,6 +6,7 @@ import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentLayout } from "components/Layout";
 import CardListStyles from '@styles/objects/projects/CardList.module.scss';
 import CardStyles from '@styles/objects/projects/Card.module.scss';
+import { getRelativeDate } from 'utills/getRelativeDate';
 
 // Props（blogsとtags）の型
 type Props = {
@@ -31,12 +32,26 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }: Props) => {
   return (
     <ContentLayout
-      content={<div className={CardListStyles["p-card-list"]}>
+      content={<div className={CardListStyles["card-list"]}>
         {blogs.map((blog) => (
-          <article key={blog.id} className={CardStyles["p-card"]}>
-            <Link href={`/blog/${blog.id}`} className={CardStyles["p-card__inner"]}>
-              {<Image width={"300"} height={"250"} alt={`${blog.title}`} src="/src/assets/images/dummy/article.png" />}
-              {blog.title}
+          <article key={blog.id} className={CardStyles["card"]}>
+            <Link href={`/blog/${blog.id}`} className={CardStyles["card__inner"]}>
+              {<Image
+                width={blog.image.width}
+                height={blog.image.height}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                alt={`${blog.title}`}
+                src={blog.image.url}
+                className={CardStyles.card__img}
+              />}
+              <p className={CardStyles.card__title}>{blog.title}</p>
+              <div className={`${CardStyles.card__summary} ${CardStyles.profile}`}>
+                {getRelativeDate(new Date(blog.createdAt))}
+              </div>
             </Link>
           </article>
         ))}

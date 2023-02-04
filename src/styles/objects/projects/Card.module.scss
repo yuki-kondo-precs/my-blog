@@ -1,10 +1,11 @@
 @use "../../foundation/typography" as *;
 
-.p-card {
-  padding: 20px;
+.card {
   background-color: var(--color-white);
+  border-radius: 8px;
 
   &__inner {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,6 +13,7 @@
   }
 
   &__img {
+    border-radius: 12.6px;
   }
 
   &__title {
@@ -20,6 +22,14 @@
   }
 
   &__summary {
-    margin-top: 56px;
+    margin-top: auto;
+  }
+}
+
+.profile {
+  display: flex;
+
+  &__img {
+
   }
 }

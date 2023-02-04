@@ -1,4 +1,3 @@
-// pages/blog/[id].js
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { client } from "libs/client";
 import type { Blog } from "types/blog";
@@ -7,7 +6,6 @@ import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
 import { ParsedUrlQuery } from "querystring";
 
-// Props（blog）の型
 type Props = {
   blog: Blog;
   highlightedBody: string;

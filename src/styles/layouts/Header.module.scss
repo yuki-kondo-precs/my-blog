@@ -1,4 +1,4 @@
-.l-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,19 +6,19 @@
   width: 100%;
   margin: 0 auto;
 
-  &__logo {
+  &Logo {
     width: 50px;
     font-size: 26px;
   }
 
-  &__nav {
+  &Nav {
     margin-left: auto;
-    &-list {
+    &List {
       display: flex;
       gap: 50px;
       list-style: none;
 
-      &-item {
+      &Item {
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 0.05em;

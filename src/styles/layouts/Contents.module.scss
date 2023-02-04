@@ -1,9 +1,9 @@
-@mixin l_contents {
-  .l-contents {
+@mixin contents {
+  .contents {
     @content;
   }
 }
 
-@include l_contents {
+@include contents {
   flex-grow: 1;
 }

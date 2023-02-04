@@ -4,20 +4,20 @@ import Link from 'next/link';
 
 export const HeaderLayout = () => {
   return (
-    <header className={styles['l-header']}>
-      <h1 className={styles['l-header__logo']}><Link href={`/`}>LOGO</Link></h1>
-      <nav className={styles['l-header__nav']}>
-        <ul className={styles['l-header__nav-list']}>
-          <li className={styles['l-header__nav-list-item']}>
+    <header className={styles.header}>
+      <h1 className={styles.headerLogo}><Link href={`/`}>LOGO</Link></h1>
+      <nav className={styles.headerNav}>
+        <ul className={styles.headerNavList}>
+          <li className={styles.headerNavListItem}>
             <Link href={`/`}>Home</Link>
           </li>
-          <li className={styles['l-header__nav-list-item']}>
+          <li className={styles.headerNavListItem}>
             <Link href={`#`}>Articles</Link>
           </li>
-          <li className={styles['l-header__nav-list-item']}>
+          <li className={styles.headerNavListItem}>
             <Link href={`#`}>About Me</Link>
           </li>
-          <li className={styles['l-header__nav-list-item']}>
+          <li className={styles.headerNavListItem}>
             <Link href={`#`}>Tags</Link>
           </li>
         </ul>

@@ -1,5 +1,5 @@
-.p-card-list {
+.card-list {
   display: grid;
-  grid-template-columns: repeat(minmax(200px, 300px), 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
   gap: 32px;
 }
