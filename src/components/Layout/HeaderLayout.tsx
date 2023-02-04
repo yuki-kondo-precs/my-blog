@@ -22,6 +22,11 @@ export const HeaderLayout = () => {
           </li>
         </ul>
       </nav>
+      <button className={`${styles.headerMenuTrigger}`}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
   );
 };
