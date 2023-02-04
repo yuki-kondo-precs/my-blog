@@ -18,7 +18,7 @@ export const HeaderLayout = () => {
             <Link href={`#`}>About Me</Link>
           </li>
           <li className={styles.headerNavListItem}>
-            <Link href={`#`}>Tags</Link>
+            <Link href={`/tags`}>Tags</Link>
           </li>
         </ul>
       </nav>
