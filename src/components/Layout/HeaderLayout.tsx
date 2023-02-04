@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const HeaderLayout = () => {
   return (
     <header className={styles.header}>
-      <h1 className={styles.headerLogo}><Link href={`/`}>LOGO</Link></h1>
+      <h1 className={styles.headerLogo}><Link href={`/`}>InnoLOG</Link></h1>
       <nav className={styles.headerNav}>
         <ul className={styles.headerNavList}>
           <li className={styles.headerNavListItem}>

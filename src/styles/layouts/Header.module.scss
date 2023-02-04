@@ -1,3 +1,4 @@
+@use '../foundation/typography';
 .header {
   display: flex;
   align-items: center;
@@ -5,10 +6,15 @@
   height: 86px;
   width: 100%;
   margin: 0 auto;
+  min-width: var(--width-base);
+  padding: 0 7%;
 
   &Logo {
     width: 50px;
-    font-size: 26px;
+    font-size: 36px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: var(--font-logo);
   }
 
   &Nav {

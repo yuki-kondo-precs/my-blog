@@ -3,11 +3,23 @@
 .section {
   display: flex;
   flex-direction: column;
+  min-width: var(--width-base);
+  padding: 0 7%;
+
+  &:nth-child(even) {
+    padding: 32px 7%;
+    background-color: var(--color-white);
+  }
+
+  & + & {
+    margin-block-start: 32px;
+  }
 
   &Title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 
     &Heading {
       @include sub-heading1;
@@ -41,6 +53,6 @@
   }
 
   &Content {
-    padding: 20px;
+    padding: 0 20px;
   }
 }

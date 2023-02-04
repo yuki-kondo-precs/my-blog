@@ -6,6 +6,9 @@ import { ContentLayout } from "components/Layout";
 import CardListStyles from '@styles/objects/projects/CardList.module.scss';
 import CardStyles from '@styles/objects/projects/Card.module.scss';
 import { SectionLayout } from "components/Layout/SectionLayout";
+import TagStyles from '@styles/objects/components/Tag.module.scss';
+import { AiFillTag } from "react-icons/ai";
+
 
 // Props（blogsとtags）の型
 type Props = {
@@ -37,7 +40,8 @@ const Tags: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           {<div className={CardListStyles["card-list"]}>
             {tags.map((tag) => (
               <article key={tag.id} className={CardStyles["card"]}>
-                <Link href={`/tags/${tag.id}`} className={CardStyles["card__inner"]}>
+                <Link href={`/tags/${tag.id}`} className={TagStyles.tag}>
+                <AiFillTag className={TagStyles.tagIcon} />
                   <p>{tag.name}</p>
                 </Link>
               </article>
