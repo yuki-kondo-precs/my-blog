@@ -9,7 +9,7 @@ type ContentLayoutProps = {
   content: React.ReactNode;
 };
 HeaderLayout
-export const ContentLayout = ({ children, content }: ContentLayoutProps) => {
+export const ContentLayout = ({ content }: ContentLayoutProps) => {
   return (
     <main className={mainStyles.main}>
       <HeaderLayout />

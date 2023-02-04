@@ -5,6 +5,7 @@ import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentLayout } from "components/Layout";
 import CardListStyles from '@styles/objects/projects/CardList.module.scss';
 import CardStyles from '@styles/objects/projects/Card.module.scss';
+import { SectionLayout } from "components/Layout/SectionLayout";
 
 // Props（blogsとtags）の型
 type Props = {
@@ -29,15 +30,22 @@ const Tags: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }: Props) => {
   return (
     <ContentLayout
-      content={<div className={CardListStyles["card-list"]}>
-        {tags.map((tag) => (
-          <article key={tag.id} className={CardStyles["card"]}>
-            <Link href={`/tags/${tag.id}`} className={CardStyles["card__inner"]}>
-              <p>{tag.name}</p>
-            </Link>
-          </article>
-        ))}
-      </div>}
+      content={
+        <SectionLayout
+          title={'Tags'}
+          content=
+          {<div className={CardListStyles["card-list"]}>
+            {tags.map((tag) => (
+              <article key={tag.id} className={CardStyles["card"]}>
+                <Link href={`/tags/${tag.id}`} className={CardStyles["card__inner"]}>
+                  <p>{tag.name}</p>
+                </Link>
+              </article>
+            ))}
+          </div>}
+          link={'/tags/'}
+        >
+        </SectionLayout>}
     >
     </ContentLayout>
   )
