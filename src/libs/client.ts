@@ -23,7 +23,7 @@ export const client = createClient({
 });
 
 export const getAllBlog = async () => {
-  return await client.get({ endpoint: 'blogs', queries: { limit: 1000 } });
+  return await client.get({ endpoint: 'blog', queries: { limit: 1000 } });
 };
 
 export const getBlog = async (args: MultipleGetArgs) => {
@@ -32,19 +32,19 @@ export const getBlog = async (args: MultipleGetArgs) => {
     limit: args.limit ? args.limit : 1000,
     filters: args.filters ? args.filters : ''
   };
-  return await client.get({ endpoint: 'blogs', queries: queries });
+  return await client.get({ endpoint: 'blog', queries: queries });
 };
 
 export const getLatestBlog = async () => {
   return await client.get({
-    endpoint: 'blogs',
+    endpoint: 'blog',
     queries: { limit: 6 }
   });
 };
 
 export const getSpecificBlog = async (args: SpecificGetArgs) => {
   return await client.get({
-    endpoint: 'blogs',
+    endpoint: 'blog',
     contentId: args.id,
     queries: args.draftKey
   });
@@ -52,7 +52,7 @@ export const getSpecificBlog = async (args: SpecificGetArgs) => {
 
 export const getPopularBlog = async () => {
   const allBlog = await client.get({
-    endpoint: 'blogs',
+    endpoint: 'blog',
     queries: { limit: 1000 }
   });
 
@@ -115,7 +115,7 @@ export const getSpecificTag = async (tagId: string) => {
 
 export const getBlogByTag = async (tagId: string) => {
   return await client.get({
-    endpoint: 'blogs',
+    endpoint: 'blog',
     queries: { filters: `tags[contains]${tagId}` }
   });
 };

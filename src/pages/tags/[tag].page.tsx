@@ -25,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const tagId = context.params?.tag;
   const offset = 0;
-  const filters = `tag[contains]${tagId}`;
+  const filters = `tags[contains]${tagId}`;
 
   const data = await getBlog({
     offset: offset,
@@ -57,6 +57,7 @@ const TagId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <ContentLayout
       content={<div className={CardListStyles["card-list"]}>
+        <h1>検索したタグ: {tag.name}</h1>
         <Blogs blogs={blogs} />
       </div>}
     >
