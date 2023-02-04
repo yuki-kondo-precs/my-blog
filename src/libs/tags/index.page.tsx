@@ -1,12 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { client } from "libs/client";
 import type { Blog, Tag } from "types/blog";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentLayout } from "components/Layout";
 import CardListStyles from '@styles/objects/projects/CardList.module.scss';
 import CardStyles from '@styles/objects/projects/Card.module.scss';
-import { getRelativeDate } from 'utills/getRelativeDate';
 
 // Props（blogsとtags）の型
 type Props = {
