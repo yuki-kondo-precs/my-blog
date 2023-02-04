@@ -50,7 +50,7 @@ const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <p>{blog.publishedAt}</p>
       {blog.tags.map((tag) => (
         <li key={tag.id}>
-          #{tag.tag}
+          #{tag.name}
         </li>
       ))}
       <div
