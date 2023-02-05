@@ -5,12 +5,11 @@
 }
 @mixin sub-heading1 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   font-family: var(--font-sans-serif);
 }
 @mixin sub-heading2 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
   font-family: var(--font-sans-serif);
 }
 @mixin paragraph1 {
@@ -23,7 +22,6 @@
 }
 @mixin paragraph3 {
   font-size: 16px;
-  font-weight: bolder;
   font-family: var(--font-sans-serif);
 }
 @mixin paragraph4 {

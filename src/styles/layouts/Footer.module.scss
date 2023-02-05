@@ -1,43 +1,61 @@
 @use '../foundation/typography' as *;
 
 .footer {
-  padding: 80px 96px 120px;
+  padding: 80px 96px 24px;
   background-color: var(--color-light-grey1);
 
   &Content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 24px;
 
     &Summary {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 8px;
+
+      &Introduction {
+        @include paragraph3;
+      }
 
       &Sns {
         display: flex;
         gap: 24px;
+        font-size: 18px;
       }
     }
     &Links {
       display: flex;
+      flex-wrap: wrap;
       gap: 80px;
 
       &Section {
         display: flex;
         flex-direction: column;
+
         &Title {
-          margin-block-end: 24px;
+          margin-block-end: 16px;
           font-weight: bold;
           @include sub-heading2;
         }
+
         &Content {
           display: flex;
           flex-direction: column;
-          gap: 20px;
-          @include paragraph2;
+          gap: 12px;
+          @include paragraph4;
         }
       }
     }
+  }
+
+  &Bottom {
+    margin-block-start: 50px;
+    border-block-start: 1px solid var(--color-gray);
+    padding-block-start: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
   }
 }

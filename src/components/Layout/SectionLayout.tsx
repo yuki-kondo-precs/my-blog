@@ -14,7 +14,7 @@ export const SectionLayout = ({ title, content, link }: SectionLayoutProps) => {
         <p className={styles.sectionTitleHeading}>{title}</p>
         {link ? <Link href={link} className={styles.sectionTitleLink}>See All Article</Link> : ''}
       </h2>
-      <div className={styles.sectionContent}>
+      <div>
         {content}
       </div>
     </section>

@@ -1,18 +1,15 @@
 import { client } from "libs/client";
-import type { Blog, Tag } from "types/blog";
+import type { Blog, Tag as TagType } from "types/blog";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentLayout } from "components/Layout";
 import CardListStyles from '@styles/objects/projects/CardList.module.scss';
 import { Blogs } from "components/Blogs";
 import { SectionLayout } from "components/Layout/SectionLayout";
-import Link from "next/link";
-import CardStyles from '@styles/objects/projects/Card.module.scss';
-import TagStyles from '@styles/objects/components/Tag.module.scss';
-import { AiFillTag } from "react-icons/ai";
+import { Tags } from "components/Tags";
 
 type Props = {
   blogs: Blog[];
-  tags: Tag[];
+  tags: TagType[];
 };
 
 export const getStaticProps = async () => {
@@ -50,14 +47,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             title={'Tags'}
             content=
             {<div className={CardListStyles["card-list"]}>
-              {tags.map((tag) => (
-                <article key={tag.id} className={CardStyles["card"]}>
-                  <Link href={`/tags/${tag.id}`} className={TagStyles.tag}>
-                    <AiFillTag className={TagStyles.tagIcon} />
-                    <p>{tag.name}</p>
-                  </Link>
-                </article>
-              ))}
+              <Tags tags={tags} />
             </div>}
             link={'/tags/'}
           >

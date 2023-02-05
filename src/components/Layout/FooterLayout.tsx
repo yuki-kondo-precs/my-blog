@@ -9,6 +9,7 @@ export const FooterLayout = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerContentSummary}>
           <Logo size="small" />
+          <p className={styles.footerContentSummaryIntroduction}>Hi, my name is uuki99.</p>
           <div className={styles.footerContentSummarySns}>
             <Link href="https://github.com/yuki-kondo-precs"><FiGithub /></Link>
             <Link href="https://twitter.com/yktsstb"><FiTwitter /></Link>
@@ -29,10 +30,10 @@ export const FooterLayout = () => {
             </div>
           </section>
           <section className={styles.footerContentLinksSection}>
-            <h3 className={styles.footerContentLinksSectionTitle}>ABOUT ME</h3>
+            <h3 className={styles.footerContentLinksSectionTitle}>ABOUT</h3>
             <div className={styles.footerContentLinksSectionContent}>
               <div className={styles.footerContentLinksSectionContent}>
-                <Link href="#">ABout Me</Link>
+                <Link href="#">About Me</Link>
                 <Link href="#">Projects</Link>
                 <Link href="#">Achievement</Link>
               </div>
@@ -49,8 +50,10 @@ export const FooterLayout = () => {
           </section>
         </div>
       </div>
-
-
+      <div className={styles.footerBottom}>
+        <p>© 2023 uuki99</p>
+        <p>Made With ❤️‍🔥 Next.js</p>
+      </div>
     </footer>
   )
 }
