@@ -4,14 +4,14 @@
   white-space: nowrap;
   font-family: var(--font-logo);
   &Accent {
-    font-size: 24px;
+    font-size: 28px;
     color: var(--color-blue);
   }
 
   &Small {
     font-size: 24px;
-    logoAccent {
-      font-size: 18px;
+    .logoAccent {
+      font-size: 20px;
       color: var(--color-blue);
     }
   }
