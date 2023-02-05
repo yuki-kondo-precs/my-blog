@@ -1,0 +1,43 @@
+@use '../foundation/typography' as *;
+
+.footer {
+  padding: 80px 96px 120px;
+  background-color: var(--color-light-grey1);
+
+  &Content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &Summary {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      &Sns {
+        display: flex;
+        gap: 24px;
+      }
+    }
+    &Links {
+      display: flex;
+      gap: 80px;
+
+      &Section {
+        display: flex;
+        flex-direction: column;
+        &Title {
+          margin-block-end: 24px;
+          font-weight: bold;
+          @include sub-heading2;
+        }
+        &Content {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include paragraph2;
+        }
+      }
+    }
+  }
+}
