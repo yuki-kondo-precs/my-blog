@@ -1,9 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
-import type { Blog } from "types/blog";
+import Link from "next/link";
 import CardStyles from '@styles/objects/projects/Card.module.scss';
 import { Tags } from "components/Tags";
-import { getRelativeDate } from 'utills/getRelativeDate';
+import type { Blog } from "types/blog";
+import { getRelativeDate } from 'utilities/getRelativeDate';
 
 type Props = {
   blogs: Blog[];

@@ -8,7 +8,9 @@
     "tsm": "typed-scss-modules src --watch --implementation sass --nameFormat none --exportType default --aliasPrefixes.@ src/",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --dir src",
+    "lint:fix": "npm run lint --fix"
+
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",

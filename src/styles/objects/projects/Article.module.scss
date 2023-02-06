@@ -1,0 +1,33 @@
+@use '../../foundation/typography' as *;
+.article {
+  max-width: var(--width-max);
+  margin: 0 auto;
+
+  &Head {
+    margin-top: 16px;
+  }
+
+  &Title {
+    @include heading1;
+  }
+
+  &Summary {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  &Category {
+    @include paragraph3;
+    color: var(--color-dark-gray);
+    font-weight: bold;
+    margin-right: auto;
+  }
+
+  &Date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @include paragraph3;
+    margin-left: 16px;
+  }
+}

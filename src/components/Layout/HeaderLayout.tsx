@@ -1,11 +1,11 @@
-import * as React from 'react';
-import styles from '@styles/layouts/Header.module.scss';
 import Link from 'next/link';
-import { Logo } from 'components/Logo';
+import * as React from 'react';
 import { BsSun, BsMoon } from "react-icons/bs";
 import { FiRss } from "react-icons/fi";
-import { RiQuillPenLine } from "react-icons/ri";
 import { MdOutlineArticle } from "react-icons/md";
+import { RiQuillPenLine } from "react-icons/ri";
+import styles from '@styles/layouts/Header.module.scss';
+import { Logo } from 'components/Logo';
 
 export const HeaderLayout = () => {
   return (

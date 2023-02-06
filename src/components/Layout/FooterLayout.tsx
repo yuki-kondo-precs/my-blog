@@ -1,7 +1,7 @@
-import { Logo } from "components/Logo"
-import styles from '@styles/layouts/Footer.module.scss';
-import { FiGithub, FiTwitter } from "react-icons/fi";
 import Link from "next/link";
+import { FiGithub, FiTwitter } from "react-icons/fi";
+import styles from '@styles/layouts/Footer.module.scss';
+import { Logo } from "components/Logo"
 
 export const FooterLayout = () => {
   return (

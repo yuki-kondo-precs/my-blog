@@ -1,11 +1,12 @@
-import { client } from "libs/client";
-import type { Blog, Tag as TagType } from "types/blog";
 import { InferGetStaticPropsType, NextPage } from "next";
-import { ContentLayout } from "components/Layout";
 import CardListStyles from '@styles/objects/projects/CardList.module.scss';
+import TagListStyles from '@styles/objects/projects/TagList.module.scss';
 import { Blogs } from "components/Blogs";
+import { ContentLayout } from "components/Layout";
 import { SectionLayout } from "components/Layout/SectionLayout";
 import { Tags } from "components/Tags";
+import { client } from "libs/client";
+import type { Blog, Tag as TagType } from "types/blog";
 
 type Props = {
   blogs: Blog[];
@@ -44,7 +45,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <SectionLayout
           title={'Tags'}
           content=
-          {<div className={CardListStyles["card-list"]}>
+          {<div className={TagListStyles.tagList}>
             <Tags tags={tags} />
           </div>}
           link={'/tags/'}

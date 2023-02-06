@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { HeaderLayout } from './HeaderLayout';
-import mainStyles from '@styles/layouts/Main.module.scss';
-import ContentsStyles from '@styles/layouts/Contents.module.scss';
 import { FooterLayout } from './FooterLayout';
+import { HeaderLayout } from './HeaderLayout';
+import ContentsStyles from '@styles/layouts/Contents.module.scss';
+import mainStyles from '@styles/layouts/Main.module.scss';
 
 type ContentLayoutProps = {
   children: React.ReactNode;

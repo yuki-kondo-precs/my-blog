@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import "highlight.js/styles/hybrid.css";
+import CardListStyles from '@styles/objects/projects/CardList.module.scss';
+import { Blogs } from "components/Blogs";
+import { ContentLayout } from "components/Layout";
 import { getAllTag, getBlog, getLatestBlog, getSortedAndLimitedTag, getSpecificTag } from "libs/client";
 import type { Blog, Tag } from "types/blog";
-import "highlight.js/styles/hybrid.css";
-import { ContentLayout } from "components/Layout";
-import { Blogs } from "components/Blogs";
-import CardListStyles from '@styles/objects/projects/CardList.module.scss';
 
 type Props = {
   blogs: Blog[];

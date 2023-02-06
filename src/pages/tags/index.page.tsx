@@ -1,14 +1,14 @@
+import { InferGetStaticPropsType, NextPage } from "next";
 import Link from "next/link";
+import { AiFillTag } from "react-icons/ai";
+import TagStyles from '@styles/objects/components/Tag.module.scss';
+import CardStyles from '@styles/objects/projects/Card.module.scss';
+import CardListStyles from '@styles/objects/projects/CardList.module.scss';
+import { ContentLayout } from "components/Layout";
+import { SectionLayout } from "components/Layout/SectionLayout";
+import { Tags } from "components/Tags";
 import { client } from "libs/client";
 import type { Blog, Tag } from "types/blog";
-import { InferGetStaticPropsType, NextPage } from "next";
-import { ContentLayout } from "components/Layout";
-import CardListStyles from '@styles/objects/projects/CardList.module.scss';
-import CardStyles from '@styles/objects/projects/Card.module.scss';
-import { SectionLayout } from "components/Layout/SectionLayout";
-import TagStyles from '@styles/objects/components/Tag.module.scss';
-import { AiFillTag } from "react-icons/ai";
-import { Tags } from "components/Tags";
 
 
 // Props（blogsとtags）の型
