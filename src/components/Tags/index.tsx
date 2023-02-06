@@ -6,16 +6,19 @@ import TagStyles from '@styles/objects/components/Tag.module.scss';
 
 type Props = {
   tags: Tag[];
+  useLink?: boolean;
 };
-export const Tags = ({ tags }: Props) => {
+export const Tags = ({ tags, useLink = true }: Props) => {
   return (
-    <div className={TagListStyles.tagList}>
+    <span className={TagListStyles.tagList}>
       {tags.map((tag) => (
-        <Link key={tag.id} href={`/tags/${tag.id}`} className={TagStyles.tag}>
-          {/* <AiFillTag className={TagStyles.tagIcon} /> */}
-          <span>{tag.name}</span>
-        </Link>
+        useLink ?
+          <Link key={tag.id} href={`/tags/${tag.id}`} className={TagStyles.tag}>
+            {/* <AiFillTag className={TagStyles.tagIcon} /> */}
+            <span>{tag.name}</span>
+          </Link>
+          : <span key={tag.id} className={TagStyles.tag}>{tag.name}</span>
       ))}
-    </div>
+    </span>
   )
 }

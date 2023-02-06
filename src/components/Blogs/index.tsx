@@ -30,11 +30,11 @@ export function Blogs(props: Props) {
               />
             </div>
             <p className={CardStyles.cardTitle}>{blog.title}</p>
-            <div className={CardStyles.cardSummary}>
+            <p className={CardStyles.cardSummary}>
               {getRelativeDate(new Date(blog.createdAt))}
-            </div>
+            </p>
             <div className={CardStyles.cardTags}>
-              <Tags tags={blog.tags} />
+              <Tags tags={blog.tags} useLink={false} />
             </div>
           </Link>
         </article>

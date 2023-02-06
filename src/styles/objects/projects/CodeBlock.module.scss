@@ -1,0 +1,18 @@
+.codeBlock {
+  font-size: 9px;
+  margin-bottom: 2rem;
+  &Title {
+    display: inline-block;
+    border-radius: 0.3rem 0.3rem 0 0;
+    background-color: #323e52;
+    padding: 0.55rem 1rem;
+    color: white;
+    font-size: 0.8rem;
+    font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
+  }
+  &Highlight {
+    border-radius: 0 0.3rem 0.3rem 0.3rem !important;
+    padding: 1.5rem !important;
+    margin-top: 0 !important;
+  }
+}

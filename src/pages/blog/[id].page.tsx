@@ -1,16 +1,17 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { client } from "libs/client";
 import type { Blog } from "types/blog";
-import cheerio from "cheerio";
-import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
 import { ParsedUrlQuery } from "querystring";
 import { ContentLayout } from "components/Layout";
 import { Tags } from "components/Tags";
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import mdx2html from 'utills/mdx2html';
+import { components } from "components/Blogs/atoms";
 
 type Props = {
   blog: Blog;
-  highlightedBody: string;
+  mdxSource: MDXRemoteSerializeResult;
 };
 interface Params extends ParsedUrlQuery {
   id: string
@@ -26,25 +27,19 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const id = context.params?.id;
   const blog = await client.get({ endpoint: "blog", contentId: id });
-  // 以下の部分を追記
-  const $ = cheerio.load(blog.content);
-  $("pre code").each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text());
-    $(elm).html(result.value);
-    $(elm).addClass("hljs");
-  });
+  const mdxSource = await mdx2html(blog.content);
 
   return {
     props: {
       blog,
-      highlightedBody: $.html(),
+      mdxSource,
     },
   };
 };
 
 const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   blog,
-  highlightedBody
+  mdxSource
 }: Props) => {
   return (
     <>
@@ -52,11 +47,7 @@ const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <h1>{blog.title}</h1>
         <p>{blog.publishedAt}</p>
 
-        <div
-            dangerouslySetInnerHTML={{
-              __html: highlightedBody,
-            }}
-          />
+        <MDXRemote {...mdxSource} components={components} />
         <Tags tags={blog.tags}></Tags>
       </ContentLayout>
     </>
