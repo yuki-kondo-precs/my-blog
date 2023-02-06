@@ -1,0 +1,19 @@
+@use '../../foundation/conf/variable' as *;
+
+.pageTop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: $z-index-layer3;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  aspect-ratio: 1 / 1;
+  font-size: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+  background: var(--color-black);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #4385bb88;
+  transition: opacity 0.3s var(--ease-out-quad);
+}

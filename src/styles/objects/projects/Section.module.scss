@@ -17,20 +17,21 @@
 
   &Title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
 
     &Heading {
       @include sub-heading1;
+
       display: flex;
       align-items: center;
 
       &::after {
-        margin-left: 8px;
-        height: 2px;
-        width: 35px;
         display: block;
+        width: 35px;
+        height: 2px;
+        margin-left: 8px;
         content: '';
         background-color: var(--color-black);
       }
@@ -39,19 +40,17 @@
     &Link {
       display: flex;
       align-items: center;
+
       &::after {
-        margin-left: 4px;
-        content: '';
         display: block;
         width: 8px;
         aspect-ratio: 1 / 1;
+        margin-left: 4px;
+        content: '';
         border-top: 2px solid var(--color-black);
         border-right: 2px solid var(--color-black);
         transform: rotate(45deg);
       }
     }
-  }
-
-  &Content {
   }
 }

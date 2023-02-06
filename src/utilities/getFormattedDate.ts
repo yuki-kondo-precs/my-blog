@@ -1,5 +1,5 @@
-import dayjs from "dayjs";
-import "dayjs/locale/ja";
+import dayjs from 'dayjs';
+import 'dayjs/locale/ja';
 
 dayjs.locale(`ja`);
 

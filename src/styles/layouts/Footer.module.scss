@@ -3,12 +3,15 @@
 .footer {
   padding: 80px 96px 24px;
   background-color: var(--color-light-grey1);
+  @media screen and (max-width: 959px) {
+    padding: 40px 6% 24px;
+  }
 
   &Content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 24px;
+    justify-content: space-between;
 
     &Summary {
       display: flex;
@@ -25,6 +28,7 @@
         font-size: 18px;
       }
     }
+
     &Links {
       display: flex;
       flex-wrap: wrap;
@@ -51,11 +55,11 @@
   }
 
   &Bottom {
-    margin-block-start: 50px;
-    border-block-start: 1px solid var(--color-gray);
-    padding-block-start: 16px;
     display: flex;
     justify-content: space-between;
+    padding-block-start: 16px;
+    margin-block-start: 50px;
     font-size: 12px;
+    border-block-start: 1px solid var(--color-gray);
   }
 }

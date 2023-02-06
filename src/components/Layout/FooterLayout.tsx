@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { FiGithub, FiTwitter } from "react-icons/fi";
+import Link from 'next/link';
+import { FiGithub, FiTwitter } from 'react-icons/fi';
 import styles from '@styles/layouts/Footer.module.scss';
-import { Logo } from "components/Logo"
+import { Logo } from 'components/Logo';
 
 export const FooterLayout = () => {
   return (
@@ -9,10 +9,16 @@ export const FooterLayout = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerContentSummary}>
           <Logo size="small" />
-          <p className={styles.footerContentSummaryIntroduction}>Hi, my name is uuki99.</p>
+          <p className={styles.footerContentSummaryIntroduction}>
+            Hi, my name is uuki99.
+          </p>
           <div className={styles.footerContentSummarySns}>
-            <Link href="https://github.com/yuki-kondo-precs"><FiGithub /></Link>
-            <Link href="https://twitter.com/yktsstb"><FiTwitter /></Link>
+            <Link href="https://github.com/yuki-kondo-precs">
+              <FiGithub />
+            </Link>
+            <Link href="https://twitter.com/yktsstb">
+              <FiTwitter />
+            </Link>
           </div>
         </div>
         <div className={styles.footerContentLinks}>
@@ -55,5 +61,5 @@ export const FooterLayout = () => {
         <p>Made With ❤️‍🔥 Next.js</p>
       </div>
     </footer>
-  )
-}
+  );
+};

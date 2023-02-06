@@ -1,7 +1,14 @@
 @use '../../foundation/typography' as *;
+
 .article {
   max-width: var(--width-max);
+  padding: 0 6vw;
   margin: 0 auto;
+
+  &MV {
+    width: '100%';
+    height: 'auto';
+  }
 
   &Head {
     margin-top: 16px;
@@ -16,18 +23,20 @@
     align-items: center;
     margin-top: 8px;
   }
+
   &Category {
     @include paragraph3;
-    color: var(--color-dark-gray);
-    font-weight: bold;
+
     margin-right: auto;
+    font-weight: bold;
+    color: var(--color-dark-gray);
   }
 
   &Date {
     display: flex;
-    align-items: center;
     gap: 4px;
-    @include paragraph3;
+    align-items: center;
     margin-left: 16px;
+    @include paragraph3;
   }
 }

@@ -6,8 +6,8 @@
 
 @include contents {
   flex-grow: 1;
+  padding-block-start: 20px;
   background-image:
     radial-gradient(var(--color-light-grey2) 5%, transparent 10%);
   background-size: 32px 32px;
-  padding-block-start: 20px;
 }

@@ -2,16 +2,8 @@
 // conf/_variables
 // ==============================================================================
 
-/////////////////////////////////////
-// prefix
-/////////////////////////////////////
-$prefix_layout: '.l-' !default;
-$prefix_component: '.m-' !default;
-$prefix_utility: '.u-' !default;
-
-
 // z-index
-$z-index__layer1: 1;
-$z-index__layer2: 10;
-$z-index__layer3: 100;
-$z-index__layer4: 1000;
+$z-index-layer1: 1;
+$z-index-layer2: 10;
+$z-index-layer3: 100;
+$z-index-layer4: 1000;

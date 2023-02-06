@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import CardStyles from '@styles/objects/projects/Card.module.scss';
-import { Tags } from "components/Tags";
-import type { Blog } from "types/blog";
+import { Tags } from 'components/Tags';
+import type { Blog } from 'types/blog';
 import { getRelativeDate } from 'utilities/getRelativeDate';
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 export function Blogs(props: Props) {
   return (
     <>
-      {props.blogs.map((blog) => (
+      {props.blogs.map(blog => (
         <article key={blog.id} className={CardStyles.card}>
           <Link href={`/blog/${blog.id}`} className={CardStyles.cardInner}>
             <div className={CardStyles.cardThumbnail}>
@@ -22,7 +22,7 @@ export function Blogs(props: Props) {
                 sizes="100vw"
                 style={{
                   width: '100%',
-                  height: 'auto',
+                  height: 'auto'
                 }}
                 alt={`${blog.title}`}
                 src={blog.image.url}

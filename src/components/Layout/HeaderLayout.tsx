@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import * as React from 'react';
-import { BsSun, BsMoon } from "react-icons/bs";
-import { FiRss } from "react-icons/fi";
-import { MdOutlineArticle } from "react-icons/md";
-import { RiQuillPenLine } from "react-icons/ri";
+import { BsSun, BsMoon } from 'react-icons/bs';
+import { FiRss } from 'react-icons/fi';
+import { MdOutlineArticle } from 'react-icons/md';
+import { RiQuillPenLine } from 'react-icons/ri';
 import styles from '@styles/layouts/Header.module.scss';
 import { Logo } from 'components/Logo';
 

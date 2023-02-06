@@ -15,6 +15,8 @@
   // Stylelint とのバッティング回避
   "css.validate": false,
   "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss"],
   "prettier.configPath": "./.prettierrc",
   "prettier.ignorePath": "./.prettierignore",
   "cssVariables.lookupFiles": ["./src/styles/foundation/conf/_variable.scss"]

@@ -1,18 +1,20 @@
 {
   "extends": [
-    "stylelint-config-standard-scss"
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order",
+    "stylelint-config-prettier-scss"
   ],
   "ignoreFiles": [
     "**/node_modules/**"
-  ],
-  "plugins": [
-    "stylelint-order"
   ],
   "rules": {
     "at-rule-no-unknown": [
       true,
       {
         "ignoreAtRules": [
+          "mixin",
+          "use",
+          "include",
           "tailwind",
           "apply",
           "variants",
@@ -21,7 +23,7 @@
         ]
       }
     ],
-    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": null,
     "string-quotes": "single"
   }
 }

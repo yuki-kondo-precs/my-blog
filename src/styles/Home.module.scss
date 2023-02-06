@@ -13,18 +13,18 @@
 
 .post {
   & > h1 {
+    padding: 10px 20px;
+    margin: 40px 0 20px;
     font-size: 30px;
     font-weight: bold;
-    margin: 40px 0 20px;
     background-color: #eee;
-    padding: 10px 20px;
     border-radius: 5px;
   }
 
   & > h2 {
+    margin: 40px 0 16px;
     font-size: 24px;
     font-weight: bold;
-    margin: 40px 0 16px;
     border-bottom: 1px solid #ddd;
   }
 
@@ -34,7 +34,7 @@
   }
 
   & > ol {
-    list-style-type: decimal;
     list-style-position: inside;
+    list-style-type: decimal;
   }
 }

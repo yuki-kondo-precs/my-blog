@@ -1,23 +1,24 @@
 .codeBlock {
-  font-size: 9px;
   margin-bottom: 2rem;
-  &Title {
-    display: inline-block;
-    border-radius: 0.3rem 0.3rem 0 0;
-    background-color: var(--color-black);
-    padding: 0.55rem 1rem;
-    color: white;
-    font-size: 8px;
-    font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
-
-    & + .codeBlockHighlight {
-      border-radius: 0 0.3rem 0.3rem 0.3rem !important;
-      margin-top: 0 !important;
-    }
-  }
+  font-size: 9px;
 
   &Highlight {
-    border-radius: 0.3rem !important;
     padding: 1rem !important;
+    border-radius: 0.3rem !important;
+  }
+
+  &Title {
+    display: inline-block;
+    padding: 0.55rem 1rem;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    font-size: 8px;
+    color: white;
+    background-color: var(--color-black);
+    border-radius: 0.3rem 0.3rem 0 0;
+
+    & + .codeBlockHighlight {
+      margin-top: 0 !important;
+      border-radius: 0 0.3rem 0.3rem !important;
+    }
   }
 }
