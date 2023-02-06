@@ -14,31 +14,32 @@ export const HeaderLayout = () => {
       <nav className={styles.headerNav}>
         <ul className={styles.headerNavList}>
           <li className={styles.headerNavListItem}>
-            <MdOutlineArticle />
-            <Link href={`#`}>Articles</Link>
+            <Link href={`#`}>
+              <MdOutlineArticle />
+              <p>Articles</p>
+            </Link>
           </li>
           <li className={styles.headerNavListItem}>
-            <RiQuillPenLine />
-            <Link href={`#`}>About</Link>
+            <Link href={`#`}>
+              <RiQuillPenLine />
+              <p>About</p>
+            </Link>
           </li>
           <li className={styles.headerNavListItem}>
-            <FiRss />
-            <Link href={`#`}>RSS</Link>
+            <Link href={`#`}>
+              <FiRss />
+              <p>RSS</p>
+            </Link>
           </li>
           <li className={styles.headerNavListItem}>
-            <BsSun />
-            {/* <BsMoon /> */}
-            <Link href={`#`}>Theme</Link>
+            <Link href={`#`}>
+              <BsSun />
+              {/* <BsMoon /> */}
+              <p>Theme</p>
+            </Link>
           </li>
         </ul>
       </nav>
-      <div className={styles.headerMenu}>
-        <button className={styles.headerMenuTrigger}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
     </header>
   );
 };

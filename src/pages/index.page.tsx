@@ -29,32 +29,28 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   tags
 }: Props) => {
   return (
-    <ContentLayout
-      content=
-      {
-        <>
-          <SectionLayout
-            title={'Articles'}
-            content={
-              <div className={CardListStyles["card-list"]}>
-                <Blogs blogs={blogs} />
-              </div>
-            }
-            link={'/articles/'}
-          >
-          </SectionLayout>
-          <SectionLayout
-            title={'Tags'}
-            content=
-            {<div className={CardListStyles["card-list"]}>
-              <Tags tags={tags} />
-            </div>}
-            link={'/tags/'}
-          >
-          </SectionLayout>
-        </>
-      }
-    >
+    <ContentLayout>
+      <>
+        <SectionLayout
+          title={'Articles'}
+          content={
+            <div className={CardListStyles["card-list"]}>
+              <Blogs blogs={blogs} />
+            </div>
+          }
+          link={'/articles/'}
+        >
+        </SectionLayout>
+        <SectionLayout
+          title={'Tags'}
+          content=
+          {<div className={CardListStyles["card-list"]}>
+            <Tags tags={tags} />
+          </div>}
+          link={'/tags/'}
+        >
+        </SectionLayout>
+      </>
     </ContentLayout>
   )
 }

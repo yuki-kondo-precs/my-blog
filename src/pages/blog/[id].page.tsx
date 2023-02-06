@@ -5,6 +5,8 @@ import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
 import { ParsedUrlQuery } from "querystring";
+import { ContentLayout } from "components/Layout";
+import { Tags } from "components/Tags";
 
 type Props = {
   blog: Blog;
@@ -45,20 +47,19 @@ const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   highlightedBody
 }: Props) => {
   return (
-    <main>
-      <h1>{blog.title}</h1>
-      <p>{blog.publishedAt}</p>
-      {blog.tags.map((tag) => (
-        <li key={tag.id}>
-          #{tag.name}
-        </li>
-      ))}
-      <div
-        dangerouslySetInnerHTML={{
-          __html: highlightedBody,
-        }}
-      />
-    </main>
+    <>
+      <ContentLayout>
+        <h1>{blog.title}</h1>
+        <p>{blog.publishedAt}</p>
+
+        <div
+            dangerouslySetInnerHTML={{
+              __html: highlightedBody,
+            }}
+          />
+        <Tags tags={blog.tags}></Tags>
+      </ContentLayout>
+    </>
   );
 }
 

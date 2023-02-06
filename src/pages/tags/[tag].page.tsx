@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
-import { client, getAllTag, getBlog, getLatestBlog, getSortedAndLimitedTag, getSpecificTag } from "libs/client";
+import { getAllTag, getBlog, getLatestBlog, getSortedAndLimitedTag, getSpecificTag } from "libs/client";
 import type { Blog, Tag } from "types/blog";
 import "highlight.js/styles/hybrid.css";
 import { ContentLayout } from "components/Layout";
@@ -55,12 +55,11 @@ const TagId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   tag
 }: Props) => {
   return (
-    <ContentLayout
-      content={<div className={CardListStyles["card-list"]}>
+    <ContentLayout>
+      <div className={CardListStyles["card-list"]}>
         <h1>検索したタグ: {tag.name}</h1>
         <Blogs blogs={blogs} />
-      </div>}
-    >
+      </div>
     </ContentLayout>
   );
 }

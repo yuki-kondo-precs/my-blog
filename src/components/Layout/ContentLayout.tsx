@@ -7,15 +7,14 @@ import { FooterLayout } from './FooterLayout';
 
 type ContentLayoutProps = {
   children: React.ReactNode;
-  content: React.ReactNode;
 };
 HeaderLayout
-export const ContentLayout = ({ content }: ContentLayoutProps) => {
+export const ContentLayout = ({ children }: ContentLayoutProps) => {
   return (
     <main className={mainStyles.main}>
       <HeaderLayout />
       <div className={ContentsStyles.contents}>
-        {content}
+        {children}
       </div>
       <FooterLayout />
     </main>

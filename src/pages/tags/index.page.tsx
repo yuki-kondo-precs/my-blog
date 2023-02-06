@@ -33,16 +33,14 @@ const TagsPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   // tags
 }: Props) => {
   return (
-    <ContentLayout
-      content={
-        <SectionLayout
-          title={'Tags'}
-          content=
-          {<Tags tags={tags} />}
-          link={'/tags/'}
-        >
-        </SectionLayout>}
-    >
+    <ContentLayout>
+      <SectionLayout
+        title={'Tags'}
+        content=
+        {<Tags tags={tags} />}
+        link={'/tags/'}
+      >
+      </SectionLayout>
     </ContentLayout>
   )
 }
