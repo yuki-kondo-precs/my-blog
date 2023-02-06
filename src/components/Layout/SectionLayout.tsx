@@ -2,7 +2,6 @@ import Link from 'next/link';
 import styles from '@styles/objects/projects/Section.module.scss';
 
 type SectionLayoutProps = {
-  children: React.ReactNode;
   title: React.ReactNode;
   content: React.ReactNode;
   link?: string;
