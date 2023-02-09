@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import styles from '@styles/objects/projects/CodeBlock.module.scss';
+import styles from '@styles/objects/components/Article/CodeBlock.module.scss';
 
 type Props = {
   className?: string;

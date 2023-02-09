@@ -11,6 +11,17 @@
 @mixin sub-heading2 {
   font-family: var(--font-sans-serif);
   font-size: 16px;
+  font-weight: 600;
+}
+@mixin sub-heading3 {
+  font-family: var(--font-sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+}
+@mixin sub-heading4 {
+  font-family: var(--font-sans-serif);
+  font-size: 12px;
+  font-weight: 600;
 }
 @mixin paragraph1 {
   font-family: var(--font-sans-serif);

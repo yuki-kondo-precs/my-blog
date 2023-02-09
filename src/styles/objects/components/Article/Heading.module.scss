@@ -1,0 +1,33 @@
+@use '../../../foundation/typography' as *;
+
+.heading {
+  &H1 {
+    @include heading1;
+
+    margin-top: 16px;
+  }
+
+  &H2 {
+    @include sub-heading1;
+
+    margin-top: 16px;
+  }
+
+  &H3 {
+    @include sub-heading2;
+
+    margin-top: 16px;
+  }
+
+  &H4 {
+    @include sub-heading3;
+
+    margin-top: 16px;
+  }
+
+  &H5 {
+    @include sub-heading4;
+
+    margin-top: 16px;
+  }
+}

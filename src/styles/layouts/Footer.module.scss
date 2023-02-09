@@ -3,6 +3,7 @@
 .footer {
   padding: 80px 96px 24px;
   background-color: var(--color-light-grey1);
+
   @media screen and (max-width: 959px) {
     padding: 40px 6% 24px;
   }
@@ -39,16 +40,17 @@
         flex-direction: column;
 
         &Title {
-          margin-block-end: 16px;
-          font-weight: bold;
           @include sub-heading2;
+
+          margin-block-end: 16px;
         }
 
         &Content {
+          @include paragraph4;
+
           display: flex;
           flex-direction: column;
           gap: 12px;
-          @include paragraph4;
         }
       }
     }

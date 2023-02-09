@@ -1,0 +1,7 @@
+@use '../../../foundation/typography' as *;
+
+.p {
+  @include paragraph4;
+
+  margin-top: 16px;
+}

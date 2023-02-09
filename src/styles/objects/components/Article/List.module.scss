@@ -1,0 +1,14 @@
+@use '../../../foundation/typography' as *;
+
+.List {
+  @include paragraph4;
+
+  margin-top: 16px;
+
+  li {
+    list-style: inside;
+  }
+
+  // &Item {
+  // }
+}

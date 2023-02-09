@@ -8,6 +8,7 @@
   &MV {
     width: '100%';
     height: 'auto';
+    margin-bottom: 16px;
   }
 
   &Head {
@@ -16,6 +17,10 @@
 
   &Title {
     @include heading1;
+  }
+
+  &Content {
+    margin-top: 32px;
   }
 
   &Summary {

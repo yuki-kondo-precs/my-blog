@@ -55,7 +55,7 @@ const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <>
       <ContentLayout>
         <article className={styles.article}>
-          <div>
+          <div className={styles.articleHead}>
             <Image
               width={blog.image.width}
               height={blog.image.height}
@@ -64,23 +64,23 @@ const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               src={blog.image.url}
               className={styles.articleMV}
             />
-            <div className={styles.articleHead}>
-              <h1 className={styles.articleTitle}>{blog.title}</h1>
-              <div className={styles.articleSummary}>
-                <p className={styles.articleCategory}>{blog.category.name}</p>
-                <p className={styles.articleDate}>
-                  <RxUpdate />
-                  {getFormattedDate(new Date(blog.updatedAt))}
-                </p>
-                <p className={styles.articleDate}>
-                  <BsClock />
-                  {getFormattedDate(new Date(blog.publishedAt))}
-                </p>
-              </div>
+            <h1 className={styles.articleTitle}>{blog.title}</h1>
+            <div className={styles.articleSummary}>
+              <p className={styles.articleCategory}>{blog.category.name}</p>
+              <p className={styles.articleDate}>
+                <RxUpdate />
+                {getFormattedDate(new Date(blog.updatedAt))}
+              </p>
+              <p className={styles.articleDate}>
+                <BsClock />
+                {getFormattedDate(new Date(blog.publishedAt))}
+              </p>
             </div>
           </div>
-          <MDXRemote {...mdxSource} components={components} />
-          <Tags tags={blog.tags}></Tags>
+          <div className={styles.articleContent}>
+            <MDXRemote {...mdxSource} components={components} />
+            <Tags tags={blog.tags}></Tags>
+          </div>
         </article>
       </ContentLayout>
     </>

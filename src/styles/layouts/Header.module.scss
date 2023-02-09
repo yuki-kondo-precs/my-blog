@@ -63,7 +63,7 @@
       list-style: none;
 
       &Item {
-        @include sub-heading2;
+        @include paragraph3;
 
         letter-spacing: 0.05em;
 
